@@ -1,0 +1,25 @@
+
+
+
+.section-cards {
+    background-color: pink;
+    padding: 1em;
+    font-family: 'Mate SC', serif;
+    
+    
+    
+    
+    }
+    .section-cards, h1{
+        text-align: center;
+    }
+
+    
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    font-family: 'Mate SC', serif;
+}

@@ -1,0 +1,216 @@
+ /* ------------------------------------------------- */
+/* HEADER                                            */
+/* ------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        & { /* .main-header */
+            flex-direction: column-reverse;
+        }
+    }
+
+    
+        
+
+    
+}
+
+#menu {
+    display: none;
+    
+
+    &:checked + .nav-bar {
+        display: block;
+        background-color: white;
+    }
+
+    &:checked ~ .search-bar .menu-toogle__label {
+        background-color: white;
+        
+    }
+}
+
+/* ------------------------------------------------- */
+/* NAVBAR                                            */
+/* ------------------------------------------------- */
+
+.nav-bar {
+    background-color: black;
+
+    &__nav-list { /* .nav-bar__nav-list */
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        background-color: black;
+       
+        
+        
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+
+    
+    &__nav-item {
+        text-align: center;
+        background-color: transparent;
+    }
+
+    &__nav-link {
+        font-family: 'Mate SC', serif;
+        display: block;
+       
+        color: white;
+        padding: 1em 2em;
+        text-decoration: none;
+      
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+}
+
+
+/* ------------------------------------------------- */
+/* SEARCH BAR                                        */
+/* ------------------------------------------------- */
+
+.search-bar {
+    
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+
+    &__logo-container, /* search-bar__logo-container */
+    &__form-container { /* search-bar__form-container */
+        padding: 1em;
+    }
+
+    &__logo-container {
+        
+
+        
+        background-image:url('/img/2.png');
+        background-size: cover;
+        background-position: center;
+        width: 280px;
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 50px;
+        
+        
+        
+
+        
+        
+        
+        
+
+        
+    }
+
+    
+
+    &__form-container {
+        background-color: white;
+        display: flex;
+        flex-basis: 100%; /* width: 100% */
+        justify-content: center;
+        height: 60px;
+        
+    }
+
+    &__form-label {
+        background-color: white;
+    }
+
+    &__form-search {
+        background-color: rgb(240, 239, 229);
+        width: 70%;
+        border-radius: 5px;
+        border: none;
+    }
+
+    &__form-submit {
+        background-color: pink;
+        color: black;
+        border:none;
+        border-radius: 5px;
+        font-family: 'Mate SC', serif;
+        
+        
+        
+        
+    }
+
+    &__carrito-container {
+        height: 48px;
+        
+        
+        
+        
+        flex: 0 0 3em; /* shorthand (grow shrink basis)  basis = 3*16px => 48 */
+        
+        
+        
+    }
+}
+
+
+/* ------------------------------------------------- */
+/* MENÚ TOOGLE                                       */
+/* ------------------------------------------------- */
+
+.menu-toogle {
+    display: none;
+    background-color: whitesmoke;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+
+    &__label {
+        display: block;
+        background-color: black;
+        height: 100%;
+    }
+
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        display: block;
+        background-color: #333;
+        height: .2em;
+        position: absolute;
+        left: .5em;
+        right: .5em;
+    }
+
+    &__top-bread {
+        top: .8em;
+    }
+    &__meat {
+        top: 50%;
+        margin-top: -.1em;
+    }
+    &__bottom-bread {
+        bottom: .8em;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: block;
+        }
+    }
+}
