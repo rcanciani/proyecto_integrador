@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 
 export default {
     server: {
-        port: "2222",
+        port: "2222"
     },
     css: {
         devSourcemap: true,
